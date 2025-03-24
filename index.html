@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Theravatar – AI Therapy by the Best</title>
+  <!-- Favicon reference -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <style>
     body {
       margin: 0;
@@ -65,11 +67,6 @@
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-    .card h3 {
-      margin-top: 0;
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
     .testimonials {
       display: grid;
       grid-template-columns: 1fr;
@@ -97,68 +94,126 @@
       padding: 40px 20px;
       font-size: 0.9rem;
     }
+    .form-page {
+      display: none;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .form-page.active {
+      display: block;
+    }
+    .form-container {
+      max-width: 500px;
+      margin: auto;
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 12px;
+    }
+    .form-container input,
+    .form-container textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .form-container button {
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .form-container button:hover {
+      background-color: #4338ca;
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>AI-Powered Therapy, Trained by the Best</h1>
-    <p>Access world-class therapy through intelligent avatars trained by top specialists — anytime, anywhere.</p>
-    <button class="cta-button">Get Early Access</button>
-  </header>
+  <!-- Landing Page -->
+  <div id="landing">
+    <header>
+      <h1>AI-Powered Therapy, Trained by the Best</h1>
+      <p>Access world-class therapy through intelligent avatars trained by top specialists — anytime, anywhere.</p>
+      <button class="cta-button" onclick="showForm()">Get Early Access</button>
+    </header>
 
-  <section>
-    <h2 class="section-title">How Theravatar Works</h2>
-    <div class="three-columns">
-      <div class="card">
-        <h3>1. Choose Your Therapy Focus</h3>
-        <p>Couples, anxiety, grief, career — select your area and we match you with an AI trained by top specialists.</p>
+    <section>
+      <h2 class="section-title">How Theravatar Works</h2>
+      <div class="three-columns">
+        <div class="card">
+          <h3>1. Choose Your Therapy Focus</h3>
+          <p>Couples, anxiety, grief, career — select your area and we match you with an AI trained by top specialists.</p>
+        </div>
+        <div class="card">
+          <h3>2. Meet Your AI Therapist</h3>
+          <p>Interact with a lifelike avatar that replicates the tone, techniques, and style of real, expert therapists.</p>
+        </div>
+        <div class="card">
+          <h3>3. Ongoing Support</h3>
+          <p>Chat 24/7, get customized plans, and track your growth — just like in real therapy, but more accessible.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>2. Meet Your AI Therapist</h3>
-        <p>Interact with a lifelike avatar that replicates the tone, techniques, and style of real, expert therapists.</p>
+    </section>
+
+    <section style="background:#f3f4f6;">
+      <h2 class="section-title">What People Are Saying</h2>
+      <div class="testimonials">
+        <blockquote>
+          <p>“I was skeptical at first, but my AI therapist helped my partner and I communicate better than ever.”</p>
+          <footer>— Asha M., Chicago</footer>
+        </blockquote>
+        <blockquote>
+          <p>“It felt like I was talking to a real person — deeply empathetic and insightful.”</p>
+          <footer>— Jordan T., San Diego</footer>
+        </blockquote>
       </div>
+    </section>
+
+    <section class="faq">
+      <h2 class="section-title">FAQs</h2>
       <div class="card">
-        <h3>3. Ongoing Support</h3>
-        <p>Chat 24/7, get customized plans, and track your growth — just like in real therapy, but more accessible.</p>
+        <h3>Is this a real therapist?</h3>
+        <p>No, it's an AI trained by top therapists to emulate their style. It's not a replacement for medical advice but can be incredibly helpful for support and reflection.</p>
       </div>
-    </div>
-  </section>
+      <div class="card" style="margin-top:20px;">
+        <h3>How do you train the AI?</h3>
+        <p>We work with licensed therapists who contribute anonymized session data, theory frameworks, and behavioral models to create highly accurate AI avatars.</p>
+      </div>
+      <div class="card" style="margin-top:20px;">
+        <h3>Is my data private?</h3>
+        <p>Yes. Privacy and confidentiality are top priorities. Sessions are encrypted, and we never share your data without consent.</p>
+      </div>
+    </section>
 
-  <section style="background:#f3f4f6;">
-    <h2 class="section-title">What People Are Saying</h2>
-    <div class="testimonials">
-      <blockquote>
-        <p>“I was skeptical at first, but my AI therapist helped my partner and I communicate better than ever.”</p>
-        <footer>— Asha M., Chicago</footer>
-      </blockquote>
-      <blockquote>
-        <p>“It felt like I was talking to a real person — deeply empathetic and insightful.”</p>
-        <footer>— Jordan T., San Diego</footer>
-      </blockquote>
-    </div>
-  </section>
+    <footer>
+      <p>© 2025 Theravatar. All rights reserved.</p>
+      <p>Built with care by therapists and engineers.</p>
+    </footer>
+  </div>
 
-  <section class="faq">
-    <h2 class="section-title">FAQs</h2>
-    <div class="card">
-      <h3>Is this a real therapist?</h3>
-      <p>No, it's an AI trained by top therapists to emulate their style. It's not a replacement for medical advice but can be incredibly helpful for support and reflection.</p>
+  <!-- Form Page -->
+  <div id="formPage" class="form-page">
+    <h2 class="section-title">Request Early Access</h2>
+    <div class="form-container">
+      <form action="https://formspree.io/f/mblgybnv" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="_replyto" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Why are you interested in Theravatar?"></textarea>
+        <button type="submit">Submit</button>
+      </form>
     </div>
-    <div class="card" style="margin-top:20px;">
-      <h3>How do you train the AI?</h3>
-      <p>We work with licensed therapists who contribute anonymized session data, theory frameworks, and behavioral models to create highly accurate AI avatars.</p>
-    </div>
-    <div class="card" style="margin-top:20px;">
-      <h3>Is my data private?</h3>
-      <p>Yes. Privacy and confidentiality are top priorities. Sessions are encrypted, and we never share your data without consent.</p>
-    </div>
-  </section>
+  </div>
 
-  <footer>
-    <p>© 2025 Theravatar. All rights reserved.</p>
-    <p>Built with care by therapists and engineers.</p>
-  </footer>
-
+  <script>
+    function showForm() {
+      document.getElementById('landing').style.display = 'none';
+      document.getElementById('formPage').classList.add('active');
+    }
+  </script>
 </body>
 </html>
